@@ -1,0 +1,310 @@
+//GLOBAL RESET
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #140931;
+}
+
+header {
+  //defines flex container
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px;
+  position: absolute;
+  z-index: 3;
+  .logo {
+    width:200px;
+    img{
+      width: 100%;
+    }
+  }
+  nav {
+    align-self: center;
+    a{
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 300;
+      //padding to anchor tags left and right
+      padding: 0 10px;
+    }
+  }
+
+}
+
+
+#top-section{
+  position: relative;
+  height: 100vh;
+  .bluredbg{
+    //linear gradient on top of image
+    background-image: linear-gradient(45deg, rgba(20,9,49,0.7) 0%,rgba(23,0,35,0.68) 16%,rgba(1,63,145,0.6) 78%,rgba(1,64,147,0.57) 79%,rgba(1,64,147,0.19) 93%,rgba(114,197,241,0) 100%), url('/img/Roselia-top.png');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    filter:blur(25px) saturate(120%);
+    position: absolute;
+    z-index: 1;
+   
+  }
+  .floating-img{
+    //style container that contains Roselia image
+    //gives container viewport height of 100
+    height:100vh;
+    width: 100%;
+    display:flex;
+    //defines alignment along main axis
+    justify-content: center;
+    //defines behavior of how flex items are on cross axis
+    align-items: flex-end;  
+    position: absolute;
+    z-index: 2
+  }
+  .roselia-img{
+    //image container size 60% width
+    width:80%;
+  }
+  img{
+    //image takes up 100% of container width
+    width:100%;
+    filter: contrast(130%);
+  }
+}
+
+//IMPORTANT GIVES MAX WIDTH TO ALL CONTAINERS IN ALL SECTIONS
+.container {
+  max-width:1400px; //IMPORTANT FOR CONTAINER
+  margin: 0 auto;
+}
+
+#bio {
+  display:flex;
+  background:#2A2C62;
+  //gets rid of the flow from top section
+  position: relative;
+  z-index: 3;
+  padding: 100px 0; //important
+  .container{
+    //defines bio section as flex container
+    display: flex;
+  }
+  p{
+    color: white;
+    line-height: 1.5;
+    font-size: .9rem; //1rem = 16px
+    width:50%;
+    padding: 0 50px;  //important
+  }
+  .logo-centered{
+    //defines flex container for logo
+    display: flex;
+    //defines alignment of main axis
+    justify-content: center;
+    //defines behavior of flex items 
+    align-items: center;
+    width: 50%;
+    padding:0 50px;  //important
+    img{
+      width:45%;
+    }
+  }
+}
+
+#media {
+  padding: 100px ; //note position of other containers
+  background-image: url('/img/Roselia intro.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  
+  
+  .title {
+    background:#2A2C62;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    color: white;
+  }
+
+  .videos{
+    //padding bottom 0
+    padding: 80px 50px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 50px;
+  }
+  .video {
+    border-radius: 4px; // creates curve edge on video
+    overflow: hidden;
+    height: 350px;  // height of each video
+    -webkit-box-shadow: 0px 6px 16px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 16px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 16px -3px rgba(0,0,0,0.75);
+    iframe{
+      height:100%;
+    }
+  }
+}
+
+#album {
+  padding: 80px 0;
+  position: relative;
+
+  .bluredbg{
+    //linear gradient on top of image
+    background-image:linear-gradient(45deg, rgba(182,64,199,1) 0%,rgba(156,98,185,0.98) 11%,rgba(156,98,185,0.96) 21%,rgba(207,176,165,0.86) 70%,rgba(207,176,165,0.84) 78%,rgba(207,176,165,0.82) 91%,rgba(207,176,165,1) 98%,rgba(206,111,204,1) 100%), url('/img/album-cover.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter:blur(25px) saturate(120%);
+    position: absolute;
+    z-index: 1;
+   
+  }
+  .container{
+    display: flex;
+    padding: 0 50px;
+    position: relative;
+    z-index:3;
+
+
+  .info{
+    width: 50%;
+    // defines flex
+    display: flex;
+    //defines flex direction main axix becomes cross axis
+    flex-direction: column;
+    //center flex items
+    align-items: center;
+    .title{
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sub-title{
+      font-size: 1.7rem;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppecase;
+      margin-bottom: 100px;
+    }
+    ul.singles {
+      //defines grid
+      display: grid;
+      //two grid columns with 50% width each of container
+      grid-template-columns: 50% 50%;
+      width: 400px;
+      margin-bottom: 80px;
+      li{
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+    .logos {
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      text-align: center;
+    }
+
+  }
+  .album-cover {
+    width: 50%;
+    display: flex;
+    //defines alignment along main axis
+    justify-content: center;
+    align-items: center;
+  }
+    img{
+      width:50%; //50% of album cover width
+    }
+  }
+}
+
+#tour {
+  background: #35255c;
+  position: relative;
+  z-index:4;
+  
+  .tourdates {
+    background: #35255c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 80px 0;
+
+    .title {
+      text-align: center;
+      color:white;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      margin:0 0 80px;
+    }
+  }
+  .dates{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    // max-width: 800px;
+    grid-gap: 20px;
+    li{
+      color: white;
+      font-size: 1.3rem;
+      span {
+        padding: 0 9px;
+      }
+
+      .city{
+        font-weight: 700;
+      }
+      .location{
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      .date{
+        font-weight: 500;
+        color: white;
+      }
+     
+    }
+  }
+}
+
+footer {
+  position:relative;
+  background:#2A2C62;
+  z-index: 4;
+  padding:20px 0;
+  .container{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    max-width:20%;
+  };
+  p{
+    color:#f7f7f7;
+  };
+}
