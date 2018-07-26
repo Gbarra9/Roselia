@@ -136,7 +136,7 @@ body {
   background: #140931; }
 
 .container {
-  max-width: 87.5rem;
+  max-width: 100rem;
   margin: 0 auto; }
 
 /* ========================================
@@ -251,6 +251,8 @@ header {
 @media (max-width: 30rem) {
   #top-section {
     height: 45vh; }
+    #top-section .bluredbg {
+      height: 45vh; }
     #top-section .floating-img {
       height: 46vh; } }
 
@@ -270,6 +272,7 @@ header {
   z-index: 3;
   padding: 6.25rem 0; }
   #bio .container {
+    padding: 0 3.125rem;
     display: flex; }
     #bio .container p {
       color: white;
@@ -298,14 +301,15 @@ header {
     padding: 4rem 0; }
     #bio .container p {
       font-size: .9rem;
-      width: 100%; } }
+      width: 100%;
+      padding: 0 1.5rem; } }
 
 /* ========================================
   MEDIA SECTION
 =========================================== */
 #media {
   padding: 6.25rem;
-  background-image: url("../img/roselia-top.png");
+  background-image: url("../img/Roselia-top.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -423,7 +427,7 @@ header {
       #album .container .info ul.singles {
         display: grid;
         grid-template-columns: 50% 50%;
-        width: 25rem;
+        width: 100%;
         margin-bottom: 5rem; }
         #album .container .info ul.singles li {
           font-size: 1.5rem;
@@ -435,6 +439,8 @@ header {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1.25rem;
         text-align: center; }
+        #album .container .info .logos li {
+          width: 14rem; }
     #album .container .album-cover {
       width: 50%;
       display: flex;
@@ -442,6 +448,18 @@ header {
       align-items: center; }
     #album .container img {
       width: 50%; }
+
+@media (min-width: 90.625rem) {
+  #album .container .info .title {
+    margin-bottom: 2.5rem; }
+  #album .container .info ul.singles li {
+    margin-bottom: 2.25rem; } }
+
+@media (max-width: 87.5rem) {
+  #album .container .info .title {
+    margin-bottom: 2.5rem; }
+  #album .container .info ul.singles li {
+    margin-bottom: 2.25rem; } }
 
 @media (max-width: 50rem) {
   #album .container {
@@ -456,7 +474,8 @@ header {
         margin-bottom: 4rem; }
       #album .container .info ul.singles {
         margin-bottom: 4rem;
-        grid-gap: 1.8rem 0; }
+        grid-gap: 1.8rem 0;
+        width: 100%; }
         #album .container .info ul.singles li {
           margin-bottom: auto; }
       #album .container .info .logos {

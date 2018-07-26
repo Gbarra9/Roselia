@@ -13,7 +13,8 @@ body {
 
 //IMPORTANT GIVES MAX WIDTH TO ALL CONTAINERS IN ALL SECTIONS
 .container {
-  max-width: 87.5rem; //IMPORTANT FOR CONTAINER (87.5rem = 1400px)
+  // max-width: 87.5rem; //IMPORTANT FOR CONTAINER (87.5rem = 1400px)
+  max-width: 100rem; //IMPORTANT FOR CONTAINER (100rem = 1600px)
   margin: 0 auto;
 }
 
@@ -129,32 +130,33 @@ header {
     nav {
       a {
         font-size:.62rem;
+        padding: 0 .5em;
       }
     }
   }
 }
 
-// 24rem = 384px
-@media (max-width:24rem) {
-  header{
-    nav {
-      a {
-        font-size:.5rem;
-      }
-    }
-  }
-}
+// // 24rem = 384px
+// @media (max-width:24rem) {
+//   header{
+//     nav {
+//       a {
+//         font-size:.5rem;
+//       }
+//     }
+//   }
+// }
 
-// 21.875rem = 350px
-@media (max-width:21.875rem) {
-  header{
-    nav {
-      a {
-        font-size:.39rem;
-      }
-    }
-  }
-}
+// // 21.875rem = 350px
+// @media (max-width:21.875rem) {
+//   header{
+//     nav {
+//       a {
+//         font-size:.39rem;
+//       }
+//     }
+//   }
+// }
 
 /* ========================================
   TOP-SECTION
@@ -236,6 +238,9 @@ header {
 @media (max-width:30rem) {
   #top-section {
     height:45vh;
+    .bluredbg{
+      height:45vh;
+    }
     .floating-img {
       //style container that contains Roselia image
       //gives container viewport height of 75
@@ -266,6 +271,7 @@ header {
   z-index: 3;
   padding: 6.25rem 0; //important (6.25rem = 100px / 16)
   .container {
+    padding: 0 3.125rem;
     //defines bio section as flex container
     display: flex;
     p {
@@ -313,6 +319,7 @@ header {
       p {
         font-size: .9rem; //1rem = 16px 
         width: 100%;
+        padding:0 1.5rem;
       }
     }
   }
@@ -524,7 +531,8 @@ header {
         //defines grid
         display: grid; //two grid columns with 50% width each of container
         grid-template-columns: 50% 50%;
-        width: 25rem; //(25rem =400px)
+        // width: 25rem; //(25rem =400px)
+        width: 100%; 
         margin-bottom: 5rem; //(5rem = 80px)
         li {
           font-size: 1.5rem;
@@ -540,6 +548,9 @@ header {
         grid-template-columns: repeat(3, 1fr);
         grid-gap:  1.25rem; //(1.25rem = 20px)
         text-align: center;
+        li {
+          width: 14rem; //(14rem = 224px) // ~~~IMPORTANT TO SPECIFY TO SHOW RENDER ON FIREFOX BROWSER~~~
+        }
       }
     }
     .album-cover {
@@ -549,13 +560,80 @@ header {
       align-items: center;
     }
     img {
-      width: 50%; //50% of album cover width
+      // influence both images from list items and album cover
+      width: 50%; //50% of album cover width and 50% of list item images (the music service logos)
     }
   }
 }
 
-// 50rem = 800px
-@media (max-width:50rem) {
+// 90.625rem = 1450px
+// SCREENS 1450px width and above
+@media (min-width:90.625rem) {
+  #album {
+    .container {
+      .info {
+        .logos{
+          li {
+            width:12rem; //(12rem)
+          }
+        }
+      }
+    }
+  }
+}
+
+// 87.5rem = 1400px
+// SCREENS 1450px width and below
+@media (max-width:87.5rem) {
+  #album {
+    .container {
+      .info {
+        .title {
+          margin-bottom: 2.5rem; //(2.5rem = 40px)
+        }
+        ul.singles {
+          li {
+            margin-bottom:  2.25rem; //(2.25rem = 36px)
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 78.125rem = 1250px
+@media (max-width:78.125rem) {
+  #album {
+    .container {
+      .info {
+        .logos {
+          li {
+            width: 11rem; //(11rem = 176px) // ~~~IMPORTANT TO SPECIFY IN REM UNITS TO SHOW RENDER ON FIREFOX BROWSER~~~
+          }
+        }
+      }
+    }
+  }
+}
+
+// 68.75rem = 1100 px
+@media (max-width:68.75rem) {
+  #album {
+    .container {
+      .info {
+        .logos {
+          li {
+            width: 10.5rem; //(10.5rem = 168px) // ~~~IMPORTANT TO SPECIFY IN REM UNITS TO SHOW RENDER ON FIREFOX BROWSER~~~
+          }
+        }
+      }
+    }
+  }
+}
+
+// 59.375rem = 950px
+@media (max-width:59.375rem) {
   #album {
     .container {
       // defines flex as a container
@@ -573,38 +651,67 @@ header {
           margin-bottom: 4rem; //(4rem = 48px) 
         }
         ul.singles {
+          // still has grid-template-columns 50% 50% (2 columns, each container takiung up 50% of container)
           margin-bottom: 4rem; //(4rem = 48px)
           grid-gap: 1.8rem 0; //(1.8rem = 28.8px)
+          width:100%; // takes 100% of information container
           
           li {
             margin-bottom: auto; // resets margin value
           }
         }
         .logos {
-          // .logos has width of current container
-          // defines grid layout
+          // creates a  columns grid layout container
           grid-template-columns: repeat(1, 1fr);
           grid-gap:  3rem 0; //(3rem = 36px)
           margin-bottom: 5rem;
+          img {
+            width: 80%; //50% of logos container cover width
+          }
         }
       }
       .album-cover {
         width: auto; // resets width value
-      }
-      img {
-        width: 50%; //50% of album cover width
+        img {
+          width: 40%; //40% of album cover width
+        }
       }
     }
   }
 }
 
-// 25rem = 400px
-@media (max-width: 25rem) {
+// 50rem = 800px
+@media (max-width:50rem) {
+  #album {
+    .container {
+        // defines flex as a container
+        display: flex;
+        // defines flex direction main axis becomes cross axis
+        flex-direction: column;
+        .info {
+          ul.singles {
+            // reset grid-template-columns, grid layout is just one column for entire info container
+            grid-template-columns: auto;
+            
+          li {
+            margin-bottom: auto; // resets margin value
+          }
+        }
+      }
+    } 
+  }
+}
+
+// 31.25rem = 500px
+@media (max-width: 31.25rem) {
 #album {
   .container {
     .info {
+      .title {
+        font-size: 2.8rem; //(2.8rem = 44.8px)
+      }
       .sub-title {
-        font-size: 1.4rem;
+        font-size: 1.4rem;  // (1.4rem = 22.4px)
       }
       ul.singles {
         grid-template-columns: auto;
@@ -617,6 +724,30 @@ header {
   }
 }
 }
+
+// 24.375rem = 390px
+@media (max-width: 24.375rem) {
+  #album {
+    .container {
+      .info {
+        .title {
+          font-size: 2.6rem; //(2.6rem = 41.6px)
+        }
+        .sub-title {
+          font-size: 1.2rem; //(1.2rem = 19.2px)
+        }
+        ul.singles {
+          grid-template-columns: auto;
+  
+        }
+      }
+      img {
+        width: 85%; //85% of album cover width
+      }
+    }
+  }
+  }
+
 
 /* ========================================
   TOUR SECTION
