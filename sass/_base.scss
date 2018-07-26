@@ -1,0 +1,750 @@
+//GLOBAL RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #140931;
+}
+
+//IMPORTANT GIVES MAX WIDTH TO ALL CONTAINERS IN ALL SECTIONS
+.container {
+  max-width: 87.5rem; //IMPORTANT FOR CONTAINER (87.5rem = 1400px)
+  margin: 0 auto;
+}
+
+
+/* ========================================
+HEADER
+=========================================== */
+
+header {
+  //defines flex container
+  display: flex;
+  width: 100%;
+  justify-content: space-between; 
+  // 1rem = 16px
+  padding: 1rem;
+  position: absolute;
+  z-index: 3;
+  .logo {
+    // 200px / 16px = 12.5rem
+    width: 12.5rem;
+    img {
+      width: 100%;
+    }
+  }
+  nav {
+    align-self: center;
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500; 
+      // em is value of current parent element's font-size(1.2rem = 19.2px), em value change relative to change in rem value 
+      // 1em (1.2rem), .65em * 19.2 = 12.480px 
+      // padding to anchor tags left and right
+      padding: 0 .65em;
+    }
+  }
+}
+
+// 56.25rem = 900px
+@media (max-width:56.25rem) {
+  header{
+    .logo {
+      // 180px / 16px = 11.25 rem
+      width: 11.25rem;
+      img {
+        // width relative to logo width value
+        width: 80%;
+      }
+    }
+  }
+}
+
+// 37.5rem = 600px
+@media (max-width:37.5rem) {
+  header{
+    .logo {
+      // 180px / 16px = 11.25 rem
+      width: 11.25rem;
+      img {
+        // width relative to logo width value
+        width: 70%;
+      }
+    }
+    nav {
+      a {
+        font-size: 1rem;
+        font-weight: 400; 
+        padding: 0 .65em;
+      }
+    }
+  }
+}
+
+// 32rem = 512px
+@media (max-width:32rem) {
+  header{
+    .logo {
+      width: 10rem;
+      img {
+        // width relative to logo width value
+        width: 65%;
+      }
+    }
+    nav {
+      a {
+        font-size: .8rem;
+      }
+    }
+  }
+}
+
+// 27.25rem = 436px
+@media (max-width:27.25rem) {
+  header{
+    .logo {
+      img {
+        // width relative to logo width value
+        width: 60%;
+      }
+    }
+    nav {
+      a {
+        font-size:.75rem;
+      }
+    }
+  }
+}
+
+// 26.135rem = 421px
+@media (max-width:26.135rem) {
+  header{
+    nav {
+      a {
+        font-size:.62rem;
+      }
+    }
+  }
+}
+
+// 24rem = 384px
+@media (max-width:24rem) {
+  header{
+    nav {
+      a {
+        font-size:.5rem;
+      }
+    }
+  }
+}
+
+// 21.875rem = 350px
+@media (max-width:21.875rem) {
+  header{
+    nav {
+      a {
+        font-size:.39rem;
+      }
+    }
+  }
+}
+
+/* ========================================
+  TOP-SECTION
+=========================================== */
+
+#top-section {
+  position: relative;
+  // section has height that covers full screen (viewport height)
+  height: 100vh;
+  .bluredbg {
+    //linear gradient on top of image
+    background-image: linear-gradient(45deg, rgba(20, 9, 49, 0.7) 0%, rgba(23, 0, 35, 0.68) 16%, rgba(1, 63, 145, 0.6) 78%, rgba(1, 64, 147, 0.57) 79%, rgba(1, 64, 147, 0.19) 93%, rgba(114, 197, 241, 0) 100%), url('/img/Roselia-top.png');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    filter: blur(25px) saturate(120%);
+    position: absolute;
+    z-index: 1;
+  }
+  .floating-img {
+    //style container that contains Roselia image
+    //gives container viewport height of 100
+    height: 100vh;
+    // takes on current 100% width of current browser webpage width
+    width: 100%;
+    display: flex; //defines how browser distributes spaces between and around content items alignment along main axis
+    justify-content: center; //defines behavior of how flex items are on cross axis
+    align-items: flex-end;
+    // position starts with nearest parent element with a relative position
+    position: absolute;
+    // creates layer stacking, the visible position at the surface influenced by the z-index value (highest number appears as surface layer)
+    z-index: 2
+  }
+  .roselia-img {
+    //image container size 80% width, so 80% width of .floating-img class width (.floating-class width influenced by current browser width size )
+    width: 80%;
+  }
+  img {
+    //image takes up 100% of container width (.roselia-img is the container)
+    width: 100%;
+    filter: contrast(130%);
+  }
+}
+
+// 53.125rem = 850px
+@media (max-width:53.125rem) {
+  #top-section {
+    .roselia-img {
+      width: 83%;
+    }
+  }
+}
+
+// 43.75rem = 700px
+@media (max-width:43.75rem) {
+  #top-section {
+    height:74vh;
+    .roselia-img {
+      width: 80%;
+    }
+    .floating-img {
+      //style container that contains Roselia image
+      //gives container viewport height of 75
+      height: 75vh;
+    }
+  }
+}
+
+// 37.5rem = 600px
+@media (max-width:37.5rem) {
+  #top-section {
+    .roselia-img {
+      width: 88%;
+    }
+  }
+}
+
+// 30rem = 480px
+@media (max-width:30rem) {
+  #top-section {
+    height:45vh;
+    .floating-img {
+      //style container that contains Roselia image
+      //gives container viewport height of 75
+      height: 46vh;
+    }
+  }
+}
+
+
+// 21.875rem = 350px
+@media (max-width:21.875em) {
+  #top-section {
+    height: 41vh;
+    .floating-img {
+      height:42vh;
+    }
+  }
+}
+
+/* ========================================
+  BIO SECTION
+=========================================== */
+
+#bio {
+  display: flex;
+  background: #2A2C62; //gets rid of the flow from top section
+  position: relative;
+  z-index: 3;
+  padding: 6.25rem 0; //important (6.25rem = 100px / 16)
+  .container {
+    //defines bio section as flex container
+    display: flex;
+    p {
+      color: white;
+      line-height: 1.5;
+      font-size: .9rem; //1rem = 16px (.9*16 = 14.4px)
+      width: 50%;
+      padding: 0 3.125rem; //important (3.125rem = 50px / 16)
+    }
+    .logo-centered {
+      //defines flex container for logo
+      display: flex; //defines alignment of main axis
+      justify-content: center; //defines behavior of flex items 
+      align-items: center;
+      padding: 0 3.125rem; //important
+      width: 50%;
+      img {
+        // 45% width of the div with .logo-centered class (only content-area, padding not included with calculation)
+        width: 45%;
+      }
+    }
+  }
+} 
+
+// 56.25rem = 900px
+@media (max-width: 56.25rem) {
+  #bio {
+    .container {
+      p {
+        line-height: 1.7;
+        width: 100%;
+      }
+      .logo-centered {
+        display: none; // hides image when width changes
+      }
+    }
+  }
+}
+
+// 37.5rem = 600px
+@media (max-width: 37.5rem) {
+  #bio {
+    padding: 4rem 0; 
+    .container {
+      p {
+        font-size: .9rem; //1rem = 16px 
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* ========================================
+  MEDIA SECTION
+=========================================== */
+
+#media {
+  padding: 6.25rem; //note position of other containers (6.25rem = 100px /16)
+  background-image: url('/img/roselia-top.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .title {
+    background: #2A2C62;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 1.25rem; // (20px = 1.25rem)
+    text-align: center;
+    width: 100%;
+    max-width: 31.25rem; // the max width of title container (500px = 31.25rem )
+    margin: 0 auto; // horizontally centers element
+    color: white;
+  }
+  .videos {
+    //padding bottom 0
+    // ( 80px = 5rem, 50px = 3.125rem)
+    padding: 5rem 3.125rem 0; 
+    // defines grid system
+    display: grid;
+    // defines two columns that each column take up 50% of the container
+    grid-template-columns: 50% 50%;
+    grid-gap: 3.125rem 0; //(50px = 3.125rem)
+  
+    .video {
+      border-radius: .25rem; // creates curve edge on video (4px = .25rem)
+      margin: 0 1.25rem; // creates left and right spacing between videos
+      overflow: hidden;
+      height: 21.875rem; // height of each video (21.875rem =350px)
+      -webkit-box-shadow: 0px 6px 16px -3px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 6px 16px -3px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 6px 16px -3px rgba(0, 0, 0, 0.75);
+      iframe {
+        height: 100%;
+      }
+    }
+  }
+}
+
+// 68.75rem = 1110px  
+@media (max-width:68.75rem) {
+  #media {
+    .videos {
+      .video {
+        height: 18.25rem; 
+      }
+    }
+  }
+}
+
+
+
+// 62.5rem = 1000px
+@media (max-width:62.5rem) {
+  #media {
+    padding: 6.25rem 0 3.125rem 0; // remove padding from left and right of the section
+    .videos {
+      .video {
+        height: 17rem; 
+      }
+    }
+  }  
+}
+
+// 57.5rem = 920px
+@media (max-width:57.5rem) {
+  #media {
+    .videos {
+      display: grid;
+      // 1fr takes up remaining space of element
+      grid-template-columns: 1fr;
+      .video {
+        height: 21.875rem; // height of each video (21.875rem =350px)
+      }
+    }
+  }
+}
+
+// 43.75rem  = 700px
+@media (max-width:43.75rem) {
+  #media {
+    .title {
+      max-width:21.875rem;
+    }
+    .videos {
+      .video {
+        height: 21.875rem; // height of each video (21.875rem = 350px)
+      }
+    }
+  }
+}
+
+// 32rem  = 512px
+@media (max-width:32rem) {
+  #media {
+    .title {
+      max-width:18.75rem; // (18.75rem = 300px)
+    }
+    .videos {
+      .video {
+        height: 17.5rem; // height of each video (21.875rem = 350px)
+      }
+    }
+  }
+}
+
+// 26.25rem  = 420px
+@media (max-width:26.25rem) {
+  #media {
+    .title {
+      max-width:17.5rem; // (17.5rem = 280px)
+    }
+    .videos {
+      .video {
+        height: 13rem; // height of each video (13rem = 208px)
+
+      }
+    }
+  }
+}
+
+// 22.5rem  = 360px
+@media (max-width:22.5rem) {
+  #media {
+    .title {
+      max-width:15rem; // (15rem = 240px)
+    }
+    .videos {
+      grid-gap: 1.6rem; // (1.6rem = 25.6px)
+      .video {
+        height: 13rem; // height of each video (13rem = 208px)
+
+      }
+    }
+  }
+}
+
+//20rem  = 320px
+@media (max-width:20rem) {
+  #media {
+    .title {
+      max-width:14rem; // (14rem = 224px)
+    }
+    .videos {
+      .video {
+        height: 11rem; // height of each video (13rem = 208px)
+      }
+    }
+  }
+}
+
+/* ========================================
+  ALBUM SECTION
+=========================================== */
+
+#album {
+  padding: 5rem 0; //(5rem = 80px)
+  position: relative;
+  .bluredbg {
+    //linear gradient on top of image
+    background-image: linear-gradient(45deg, rgba(182, 64, 199, 1) 0%, rgba(156, 98, 185, 0.98) 11%, rgba(156, 98, 185, 0.96) 21%, rgba(207, 176, 165, 0.86) 70%, rgba(207, 176, 165, 0.84) 78%, rgba(207, 176, 165, 0.82) 91%, rgba(207, 176, 165, 1) 98%, rgba(206, 111, 204, 1) 100%), url('/img/album-cover.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    filter: blur(25px) saturate(120%);
+    position: absolute;
+    z-index: 1;
+  }
+  .container {
+    // defines flex as a container
+    display: flex;
+    padding: 0 3.125rem; //(3.125rem = 50px)
+    position: relative;
+    // Creates layer, z-index of 3 is the highest value in section and will appear first visually
+    z-index: 3;
+    .info {
+      width: 50%; 
+      // defines flex
+      display: flex; //defines flex direction main axis becomes cross axis
+      flex-direction: column; //center flex items
+      align-items: center;
+      .title {
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1.25rem; //(1.25rem = 20px)
+      }
+      .sub-title {
+        font-size: 1.7rem;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 6.25rem; //(6.25rem = 100px) 
+      }
+      ul.singles {
+        //defines grid
+        display: grid; //two grid columns with 50% width each of container
+        grid-template-columns: 50% 50%;
+        width: 25rem; //(25rem =400px)
+        margin-bottom: 5rem; //(5rem = 80px)
+        li {
+          font-size: 1.5rem;
+          font-weight: 400;
+          text-align: center;
+          margin-bottom:  1.25rem; //(1.25rem = 20px)
+        }
+      }
+      .logos {
+        // .logos has width of current container
+        // defines grid layout
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:  1.25rem; //(1.25rem = 20px)
+        text-align: center;
+      }
+    }
+    .album-cover {
+      width: 50%;
+      display: flex; //defines alignment along main axis
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 50%; //50% of album cover width
+    }
+  }
+}
+
+// 50rem = 800px
+@media (max-width:50rem) {
+  #album {
+    .container {
+      // defines flex as a container
+      display: flex;
+      // defines flex direction main axis becomes cross axis
+      flex-direction: column;
+      .info {
+        // reset width value to default
+        width:auto;
+        .title {
+          margin-bottom: 2.25rem; //(2.25rem = 36px)
+        }
+        .sub-title {
+          font-size: 1.9rem;
+          margin-bottom: 4rem; //(4rem = 48px) 
+        }
+        ul.singles {
+          margin-bottom: 4rem; //(4rem = 48px)
+          grid-gap: 1.8rem 0; //(1.8rem = 28.8px)
+          
+          li {
+            margin-bottom: auto; // resets margin value
+          }
+        }
+        .logos {
+          // .logos has width of current container
+          // defines grid layout
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap:  3rem 0; //(3rem = 36px)
+          margin-bottom: 5rem;
+        }
+      }
+      .album-cover {
+        width: auto; // resets width value
+      }
+      img {
+        width: 50%; //50% of album cover width
+      }
+    }
+  }
+}
+
+// 25rem = 400px
+@media (max-width: 25rem) {
+#album {
+  .container {
+    .info {
+      .sub-title {
+        font-size: 1.4rem;
+      }
+      ul.singles {
+        grid-template-columns: auto;
+
+      }
+    }
+    img {
+      width: 85%; //85% of album cover width
+    }
+  }
+}
+}
+
+/* ========================================
+  TOUR SECTION
+=========================================== */
+
+#tour {
+  background: #35255c;
+  position: relative;
+  z-index: 4;
+  .tour-dates {
+    background: #35255c;
+    // defines flex container
+    display: flex;
+    // defines direction of main-axis and direction flex items are placed in container (column value = main axis is vertical)
+    flex-direction: column;
+    // defines alignment along main axis
+    justify-content: center;
+    // defines default behavior for flex items along cross axis on current line  (note: cross axis is horizontal due to flex-direction)
+    align-items: center;
+    padding: 5rem 0; // (5rem = 80px)
+    .title {
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      margin: 0 0 5rem; // (5rem = 80px)
+    }
+  }
+  .dates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // max-width: 800px;
+    grid-gap: 1.25rem; // (1.25rem = 20px)
+    li {
+      color: white;
+      font-size: 1.3rem;
+      span {
+        padding: 0 .5625rem; // (.5625rem = 9px)
+      }
+      .city {
+        font-weight: 700;
+      }
+      .location {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      .date {
+        font-weight: 500;
+        color: white;
+      }
+    }
+  }
+}
+
+// 55rem = 880px 
+@media (max-width:55rem) {
+  #tour {
+    .dates {
+      // two columns, each column has a 1fr value
+      grid-template-columns: repeat(2, 1fr); 
+      grid-gap: 2rem; // (2rem = 32px)
+      justify-items: center;
+    }
+  }
+}
+
+// 37.5rem = 600px
+@media (max-width:37.5rem) {
+  #tour {
+    .tour-dates {
+      padding: 3rem 0; // (3rem = 48px)
+      .title {
+        margin: 0 0 2.5rem; 
+      }
+    }
+    .dates {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); 
+      grid-gap: 2.25rem; // (2.25rem = 36px)
+    }
+  }
+}
+
+/* ========================================
+  FOOTER
+=========================================== */
+
+footer {
+  position: relative;
+  background: #2A2C62;
+  z-index: 4;
+  padding: 20px 0;
+  .container {
+    // defines flex container
+    display: flex;
+    // specifies the direction of flex items
+    flex-direction: column;
+    // defines alignment along main axis
+    justify-content: center;
+    // defines default behavior of flex items along alignment along cross axis
+    align-items: center;
+  }
+  img {
+    // 20% of max-width from current container width, dependent on current browser size (current container width = current browser size width)
+    max-width: 20%;
+  }
+  p {
+    color: #f7f7f7;
+  }
+}
+
+// 40.63rem = 650px
+@media (max-width: 40.63rem) {
+  footer {
+    p {
+      font-size: .9rem;
+    }
+  }
+}
+
+// 26.25rem = 420px
+@media (max-width: 40.63rem) {
+  footer {
+    img {
+      max-width: 25%;
+      transform: translate(-.5rem)
+    }
+    p {
+      font-size: .8rem;
+    }
+  }
+}
