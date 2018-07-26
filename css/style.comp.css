@@ -131,10 +131,17 @@ table {
   padding: 0;
   box-sizing: border-box; }
 
+<<<<<<< HEAD
+=======
+* {
+  box-sizing: border-box; }
+
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
 body {
   font-family: 'Roboto', sans-serif;
   background: #140931; }
 
+<<<<<<< HEAD
 .container {
   max-width: 87.5rem;
   margin: 0 auto; }
@@ -142,15 +149,25 @@ body {
 /* ========================================
 HEADER
 =========================================== */
+=======
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
 header {
   display: flex;
   width: 100%;
   justify-content: space-between;
+<<<<<<< HEAD
   padding: 1rem;
   position: absolute;
   z-index: 3; }
   header .logo {
     width: 12.5rem; }
+=======
+  padding: 15px;
+  position: absolute;
+  z-index: 3; }
+  header .logo {
+    width: 200px; }
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
     header .logo img {
       width: 100%; }
   header nav {
@@ -159,6 +176,7 @@ header {
       color: white;
       text-decoration: none;
       font-size: 1.2rem;
+<<<<<<< HEAD
       font-weight: 500;
       padding: 0 .65em; }
 
@@ -207,6 +225,11 @@ header {
 /* ========================================
   TOP-SECTION
 =========================================== */
+=======
+      font-weight: 300;
+      padding: 0 10px; }
+
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
 #top-section {
   position: relative;
   height: 100vh; }
@@ -232,6 +255,7 @@ header {
     width: 100%;
     filter: contrast(130%); }
 
+<<<<<<< HEAD
 @media (max-width: 53.125em) {
   #top-section .roselia-img {
     width: 83%; } }
@@ -251,11 +275,18 @@ header {
 /* ========================================
   BIO SECTION
 =========================================== */
+=======
+.container {
+  max-width: 1400px;
+  margin: 0 auto; }
+
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
 #bio {
   display: flex;
   background: #2A2C62;
   position: relative;
   z-index: 3;
+<<<<<<< HEAD
   padding: 6.25rem 0; }
   #bio .container {
     display: flex; }
@@ -294,12 +325,36 @@ header {
 #media {
   padding: 6.25rem;
   background-image: url("/img/roselia-top.png");
+=======
+  padding: 100px 0; }
+  #bio .container {
+    display: flex; }
+  #bio p {
+    color: white;
+    line-height: 1.5;
+    font-size: .9rem;
+    width: 50%;
+    padding: 0 50px; }
+  #bio .logo-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 0 50px; }
+    #bio .logo-centered img {
+      width: 45%; }
+
+#media {
+  padding: 100px;
+  background-image: url("/img/Roselia intro.jpg");
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
   #media .title {
     background: #2A2C62;
     font-size: 1.1rem;
+<<<<<<< HEAD
     font-weight: 400;
     text-transform: uppercase;
     padding: 1.25rem;
@@ -376,6 +431,31 @@ header {
 /* ========================================
   ALBUM SECTION
 =========================================== */
+=======
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    color: white; }
+  #media .videos {
+    padding: 80px 50px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 50px; }
+  #media .video {
+    border-radius: 4px;
+    overflow: hidden;
+    height: 350px;
+    -webkit-box-shadow: 0px 6px 16px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 6px 16px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 6px 16px -3px rgba(0, 0, 0, 0.75); }
+    #media .video iframe {
+      height: 100%; }
+
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
 #album {
   padding: 80px 0;
   position: relative; }
@@ -431,35 +511,59 @@ header {
     #album .container img {
       width: 50%; }
 
+<<<<<<< HEAD
 /* ========================================
   TOUR SECTION
 =========================================== */
+=======
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
 #tour {
   background: #35255c;
   position: relative;
   z-index: 4; }
+<<<<<<< HEAD
   #tour .tour-dates {
+=======
+  #tour .tourdates {
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
     background: #35255c;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     padding: 5rem 0; }
     #tour .tour-dates .title {
+=======
+    padding: 80px 0; }
+    #tour .tourdates .title {
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
       text-align: center;
       color: white;
       text-transform: uppercase;
       font-size: 1.8rem;
+<<<<<<< HEAD
       margin: 0 0 5rem; }
   #tour .dates {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.25rem; }
+=======
+      margin: 0 0 80px; }
+  #tour .dates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; }
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
     #tour .dates li {
       color: white;
       font-size: 1.3rem; }
       #tour .dates li span {
+<<<<<<< HEAD
         padding: 0 .5625rem; }
+=======
+        padding: 0 9px; }
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
       #tour .dates li .city {
         font-weight: 700; }
       #tour .dates li .location {
@@ -469,6 +573,7 @@ header {
         font-weight: 500;
         color: white; }
 
+<<<<<<< HEAD
 @media (max-width: 53.13rem) {
   #tour .dates {
     grid-template-columns: repeat(2, 1fr);
@@ -488,6 +593,8 @@ header {
 /* ========================================
   FOOTER
 =========================================== */
+=======
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
 footer {
   position: relative;
   background: #2A2C62;
@@ -502,6 +609,7 @@ footer {
     max-width: 20%; }
   footer p {
     color: #f7f7f7; }
+<<<<<<< HEAD
 
 @media (max-width: 40.63rem) {
   footer p {
@@ -513,3 +621,5 @@ footer {
     transform: translate(-0.5rem); }
   footer p {
     font-size: .8rem; } }
+=======
+>>>>>>> 706f27cfb6fc7d539f5a1873f8e2ca2f706a53b4
