@@ -180,7 +180,8 @@ header {
   }
 }
 
-// SCREENS WIDTH 1450px AND ABOVE
+// ~~~~~SCREENS WIDTH 1450px AND ABOVE~~~~~
+
 // MIN-WIDTH (90.625rem) = 1450px 
 @media (min-width: 90.625rem){
   #top-section {
@@ -198,6 +199,9 @@ header {
 @media (max-width:64rem) {
   #top-section {
     height:74vh;
+    .bluredbg {
+      height: 74vh;
+    }
     .floating-img {
       height: 75vh;
     }
@@ -211,9 +215,6 @@ header {
 @media (max-width:53.125rem) {
   #top-section {
     height: 100vh;
-    .floating-img {
-      height:100vh;
-    }
     .roselia-img {
         width:73%;
       img {

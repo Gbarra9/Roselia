@@ -206,7 +206,7 @@ header {
   #top-section .bluredbg {
     background-image: linear-gradient(45deg, rgba(20, 9, 49, 0.7) 0%, rgba(23, 0, 35, 0.68) 16%, rgba(1, 63, 145, 0.6) 78%, rgba(1, 64, 147, 0.57) 79%, rgba(1, 64, 147, 0.19) 93%, rgba(114, 197, 241, 0) 100%), url("../img/Roselia-top.png");
     background-size: cover;
-    height: 100vh;
+    height: inherit;
     width: 100%;
     filter: blur(25px) saturate(120%);
     position: absolute;
@@ -229,25 +229,71 @@ header {
   #top-section .roselia-img {
     width: 70%; } }
 
+@media (max-width: 64rem) {
+  #top-section {
+    height: 74vh; }
+    #top-section .bluredbg {
+      height: 74vh; }
+    #top-section .floating-img {
+      height: 75vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
+
 @media (max-width: 53.125rem) {
-  #top-section .roselia-img {
-    width: 75%; }
-    #top-section .roselia-img img {
-      width: 100%; } }
+  #top-section {
+    height: 100vh; }
+    #top-section .roselia-img {
+      width: 73%; }
+      #top-section .roselia-img img {
+        width: 100%; } }
+
+@media (max-width: 51.4375) {
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 75%; }
+      #top-section .roselia-img img {
+        width: 100%; } }
+
+@media (max-width: 50.75rem) {
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 65%; } }
+
+@media (max-width: 48rem) {
+  #top-section {
+    height: 53vh; }
+    #top-section .floating-img {
+      height: 53vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
 
 @media (max-width: 46.875rem) {
   #top-section {
-    height: 85vh; }
+    height: 88vh; }
     #top-section .floating-img {
       height: 88vh; }
     #top-section .roselia-img {
       width: 80%; } }
 
+@media (max-width: 46rem) {
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
+
 @media (max-width: 43.75rem) {
   #top-section {
-    height: 73vh; }
+    height: 100vh; }
     #top-section .floating-img {
-      height: 75vh; }
+      height: 100vh; }
     #top-section .roselia-img {
       width: 80%; } }
 
@@ -259,15 +305,15 @@ header {
   #top-section {
     height: 63vh; }
     #top-section .bluredbg {
-      height: 63vh; }
+      height: 64vh; }
     #top-section .floating-img {
       height: 66vh; } }
 
 @media (max-width: 30rem) {
   #top-section {
-    height: 57vh; }
+    height: 50vh; }
     #top-section .floating-img {
-      height: 60vh; }
+      height: 51vh; }
     #top-section .roselia-img {
       width: 85%; } }
 
@@ -279,11 +325,27 @@ header {
     #top-section .roselia-img {
       width: 80%; } }
 
+@media (min-height: 64rem) {
+  #top-section {
+    height: 55vh; }
+    #top-section .floating-img {
+      height: 56vh; }
+    #top-section .roselia-img {
+      width: 77%; } }
+
+@media (min-height: 85.375rem) {
+  #top-section {
+    height: 40vh; }
+    #top-section .floating-img {
+      height: 41vh; }
+    #top-section .roselia-img {
+      width: 77%; } }
+
 @media (max-height: 23.4375rem) {
   #top-section {
-    height: 75vh; }
+    height: 100vh; }
     #top-section .floating-img {
-      height: 78vh; }
+      height: 100vh; }
     #top-section .roselia-img {
       width: 55%; }
       #top-section .roselia-img img {
@@ -295,7 +357,7 @@ header {
     #top-section .floating-img {
       height: 100vh; }
     #top-section .roselia-img {
-      width: 55%; }
+      width: 63%; }
       #top-section .roselia-img img {
         width: 100%; } }
 
