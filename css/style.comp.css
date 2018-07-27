@@ -194,15 +194,8 @@ header {
 
 @media (max-width: 26.135rem) {
   header nav a {
-    font-size: .62rem; } }
-
-@media (max-width: 24rem) {
-  header nav a {
-    font-size: .5rem; } }
-
-@media (max-width: 21.875rem) {
-  header nav a {
-    font-size: .39rem; } }
+    font-size: .62rem;
+    padding: 0 .5em; } }
 
 /* ========================================
   TOP-SECTION
@@ -228,21 +221,35 @@ header {
     z-index: 2; }
   #top-section .roselia-img {
     width: 80%; }
-  #top-section img {
-    width: 100%;
-    filter: contrast(130%); }
+    #top-section .roselia-img img {
+      width: 100%;
+      filter: contrast(130%); }
+
+@media (min-width: 90.625rem) {
+  #top-section .roselia-img {
+    width: 70%; } }
 
 @media (max-width: 53.125rem) {
   #top-section .roselia-img {
-    width: 83%; } }
+    width: 75%; }
+    #top-section .roselia-img img {
+      width: 100%; } }
+
+@media (max-width: 46.875rem) {
+  #top-section {
+    height: 85vh; }
+    #top-section .floating-img {
+      height: 88vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
 
 @media (max-width: 43.75rem) {
   #top-section {
-    height: 74vh; }
-    #top-section .roselia-img {
-      width: 80%; }
+    height: 73vh; }
     #top-section .floating-img {
-      height: 75vh; } }
+      height: 75vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
 
 @media (max-width: 37.5rem) {
   #top-section .roselia-img {
@@ -250,17 +257,57 @@ header {
 
 @media (max-width: 30rem) {
   #top-section {
-    height: 45vh; }
+    height: 63vh; }
     #top-section .bluredbg {
-      height: 45vh; }
+      height: 63vh; }
     #top-section .floating-img {
-      height: 46vh; } }
+      height: 66vh; } }
+
+@media (max-width: 30rem) {
+  #top-section {
+    height: 57vh; }
+    #top-section .floating-img {
+      height: 60vh; }
+    #top-section .roselia-img {
+      width: 85%; } }
 
 @media (max-width: 21.875em) {
   #top-section {
-    height: 41vh; }
+    height: 50vh; }
     #top-section .floating-img {
-      height: 42vh; } }
+      height: 53vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
+
+@media (max-height: 23.4375rem) {
+  #top-section {
+    height: 75vh; }
+    #top-section .floating-img {
+      height: 78vh; }
+    #top-section .roselia-img {
+      width: 55%; }
+      #top-section .roselia-img img {
+        width: 100%; } }
+
+@media (max-height: 22.5rem) {
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 55%; }
+      #top-section .roselia-img img {
+        width: 100%; } }
+
+@media (max-height: 20rem) {
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 65%; }
+      #top-section .roselia-img img {
+        width: 100%; } }
 
 /* ========================================
   BIO SECTION
@@ -451,17 +498,27 @@ header {
 
 @media (min-width: 90.625rem) {
   #album .container .info .title {
-    margin-bottom: 2.5rem; }
+    margin-bottom: 2.6rem; }
   #album .container .info ul.singles li {
-    margin-bottom: 2.25rem; } }
+    margin-bottom: 2.3rem; }
+  #album .container .info .logos li {
+    width: 12rem; } }
 
-@media (max-width: 87.5rem) {
+@media (max-width: 90.56rem) {
   #album .container .info .title {
     margin-bottom: 2.5rem; }
   #album .container .info ul.singles li {
     margin-bottom: 2.25rem; } }
 
-@media (max-width: 50rem) {
+@media (max-width: 78.125rem) {
+  #album .container .info .logos li {
+    width: 11rem; } }
+
+@media (max-width: 68.75rem) {
+  #album .container .info .logos li {
+    width: 10.5rem; } }
+
+@media (max-width: 59.375rem) {
   #album .container {
     display: flex;
     flex-direction: column; }
@@ -482,14 +539,37 @@ header {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 3rem 0;
         margin-bottom: 5rem; }
+        #album .container .info .logos img {
+          width: 80%; }
     #album .container .album-cover {
       width: auto; }
-    #album .container img {
-      width: 50%; } }
+      #album .container .album-cover img {
+        width: 40%; } }
 
-@media (max-width: 25rem) {
+@media (max-width: 50rem) {
+  #album .container {
+    display: flex;
+    flex-direction: column; }
+    #album .container .info ul.singles {
+      grid-template-columns: auto; }
+      #album .container .info ul.singles li {
+        margin-bottom: auto; } }
+
+@media (max-width: 31.25rem) {
+  #album .container .info .title {
+    font-size: 2.8rem; }
   #album .container .info .sub-title {
     font-size: 1.4rem; }
+  #album .container .info ul.singles {
+    grid-template-columns: auto; }
+  #album .container img {
+    width: 85%; } }
+
+@media (max-width: 24.375rem) {
+  #album .container .info .title {
+    font-size: 2.6rem; }
+  #album .container .info .sub-title {
+    font-size: 1.2rem; }
   #album .container .info ul.singles {
     grid-template-columns: auto; }
   #album .container img {

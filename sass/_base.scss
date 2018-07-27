@@ -136,27 +136,6 @@ header {
   }
 }
 
-// // 24rem = 384px
-// @media (max-width:24rem) {
-//   header{
-//     nav {
-//       a {
-//         font-size:.5rem;
-//       }
-//     }
-//   }
-// }
-
-// // 21.875rem = 350px
-// @media (max-width:21.875rem) {
-//   header{
-//     nav {
-//       a {
-//         font-size:.39rem;
-//       }
-//     }
-//   }
-// }
 
 /* ========================================
   TOP-SECTION
@@ -193,34 +172,137 @@ header {
   .roselia-img {
     //image container size 80% width, so 80% width of .floating-img class width (.floating-class width influenced by current browser width size )
     width: 80%;
+    img {
+      //image takes up 100% of container width (.roselia-img is the container)
+      width: 100%;
+      filter: contrast(130%);
+    }
   }
-  img {
-    //image takes up 100% of container width (.roselia-img is the container)
-    width: 100%;
-    filter: contrast(130%);
+}
+
+// SCREENS WIDTH 1450px AND ABOVE
+// MIN-WIDTH (90.625rem) = 1450px 
+@media (min-width: 90.625rem){
+  #top-section {
+    .roselia-img {
+      //image container size 80% width, so 80% width of .floating-img class width (.floating-class width influenced by current browser width size )
+      width: 70%;
+    }
+  }
+} 
+
+
+// ~~~~~MEDIA QUERIES MIN-WIDTH~~~~~ 
+
+// 64rem = 1024px
+@media (max-width:64rem) {
+  #top-section {
+    height:74vh;
+    .floating-img {
+      height: 75vh;
+    }
+    .roselia-img {
+      width: 80%;
+    }
   }
 }
 
 // 53.125rem = 850px
 @media (max-width:53.125rem) {
   #top-section {
+    height: 100vh;
+    .floating-img {
+      height:100vh;
+    }
     .roselia-img {
-      width: 83%;
+        width:73%;
+      img {
+        width: 100%;
+      }
     }
   }
 }
 
-// 43.75rem = 700px
-@media (max-width:43.75rem) {
+// 51.4375rem = 823px
+@media (max-width:51.4375) {
   #top-section {
-    height:74vh;
+    height: 100vh;
+    .floating-img {
+      height:100vh;
+    }
+    .roselia-img {
+        width:75%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// 50.75rem = 812px
+@media (max-width:50.75rem) {
+  #top-section {
+    height: 100vh;
+    .floating-img {
+      height: 100vh;
+    }
+    .roselia-img {
+      width: 65%;
+    }
+  }
+}
+
+
+// 48rem = 768px
+@media (max-width:48rem) {
+  #top-section {
+    height:53vh;
+    .floating-img {
+      height: 53vh;
+    }
     .roselia-img {
       width: 80%;
     }
+  }
+}
+
+
+// 46.875rem = 750px
+@media (max-width:46.875rem) {
+  #top-section {
+    height:88vh;
     .floating-img {
-      //style container that contains Roselia image
-      //gives container viewport height of 75
-      height: 75vh;
+      height: 88vh;
+    }
+    .roselia-img {
+      width: 80%;
+    }
+  }
+}
+
+// 46rem = 736px
+@media (max-width:46rem) {
+  #top-section {
+    height:100vh;
+    .floating-img {
+      height: 100vh;
+    }
+    .roselia-img {
+      width: 80%;
+    }
+  }
+}
+
+
+// 43.75rem = 700px
+@media (max-width:43.75rem) {
+  #top-section {
+    height:100vh;
+    .floating-img {
+      height: 100vh;
+    }
+    .roselia-img {
+      width: 80%;
     }
   }
 }
@@ -237,14 +319,27 @@ header {
 // 30rem = 480px
 @media (max-width:30rem) {
   #top-section {
-    height:45vh;
+    height:63vh;
     .bluredbg{
-      height:45vh;
+      height:64vh;
     }
     .floating-img {
       //style container that contains Roselia image
       //gives container viewport height of 75
-      height: 46vh;
+      height: 66vh;
+    }
+  }
+}
+
+// 30rem = 400px
+@media (max-width:30rem) {
+  #top-section {
+    height:50vh;
+    .floating-img {
+      height: 51vh;
+    }
+    .roselia-img {
+      width:85%;
     }
   }
 }
@@ -253,12 +348,95 @@ header {
 // 21.875rem = 350px
 @media (max-width:21.875em) {
   #top-section {
-    height: 41vh;
+    height: 50vh;
     .floating-img {
-      height:42vh;
+      height:53vh;
+    }
+    .roselia-img {
+      width:80%;
     }
   }
 }
+
+
+
+// ~~~~~MEDIA QUERIES MIN-HEIGHT~~~~~~~ 
+// 64rem = 1024px
+@media (min-height:64rem) {
+  #top-section {
+    height:55vh;
+    .floating-img {
+      height: 56vh;
+    }
+    .roselia-img {
+      width: 77%;
+    }
+  }
+}
+
+// 64rem = 1024px
+@media (min-height:85.375rem) {
+  #top-section {
+    height:40vh;
+    .floating-img {
+      height: 41vh;
+    }
+    .roselia-img {
+      width: 77%;
+    }
+  }
+}
+
+// ~~~~~MEDIA QUERIES MAX-HEIGHT~~~~~~~ 
+
+// 23.4375rem = 375px
+@media (max-height:23.4375rem) {
+  #top-section {
+    height:100vh;
+    .floating-img {
+      height: 100vh;
+    }
+    .roselia-img {
+      width: 55%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// 22.5rem = 360px
+@media (max-height:22.5rem) {
+  #top-section {
+    height:100vh;
+    .floating-img {
+      height: 100vh;
+    }
+    .roselia-img {
+      width: 63%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// 20rem = 320px
+@media (max-height:20rem) {
+  #top-section {
+    height:100vh;
+    .floating-img {
+      height: 100vh;
+    }
+    .roselia-img {
+      width: 65%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 
 /* ========================================
   BIO SECTION
@@ -572,9 +750,17 @@ header {
   #album {
     .container {
       .info {
+        .title {
+          margin-bottom:2.6rem; //( 2.6rem = 41.6px)
+        }
+        ul.singles {
+          li {
+            margin-bottom:2.3rem; //( 2.3rem = 36.8px)
+          }
+        }
         .logos{
           li {
-            width:12rem; //(12rem)
+            width:12rem; //(12rem = 192px)
           }
         }
       }
@@ -582,9 +768,9 @@ header {
   }
 }
 
-// 87.5rem = 1400px
+// 90.56rem = 1449px
 // SCREENS 1450px width and below
-@media (max-width:87.5rem) {
+@media (max-width:90.56rem) {
   #album {
     .container {
       .info {

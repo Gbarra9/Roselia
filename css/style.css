@@ -221,21 +221,81 @@ header {
     z-index: 2; }
   #top-section .roselia-img {
     width: 80%; }
-  #top-section img {
-    width: 100%;
-    filter: contrast(130%); }
+    #top-section .roselia-img img {
+      width: 100%;
+      filter: contrast(130%); }
+
+@media (min-width: 90.625rem) {
+  #top-section .roselia-img {
+    width: 70%; } }
+
+@media (max-width: 64rem) {
+  #top-section {
+    height: 74vh; }
+    #top-section .floating-img {
+      height: 75vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
 
 @media (max-width: 53.125rem) {
-  #top-section .roselia-img {
-    width: 83%; } }
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 73%; }
+      #top-section .roselia-img img {
+        width: 100%; } }
+
+@media (max-width: 51.4375) {
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 75%; }
+      #top-section .roselia-img img {
+        width: 100%; } }
+
+@media (max-width: 50.75rem) {
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 65%; } }
+
+@media (max-width: 48rem) {
+  #top-section {
+    height: 53vh; }
+    #top-section .floating-img {
+      height: 53vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
+
+@media (max-width: 46.875rem) {
+  #top-section {
+    height: 88vh; }
+    #top-section .floating-img {
+      height: 88vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
+
+@media (max-width: 46rem) {
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
 
 @media (max-width: 43.75rem) {
   #top-section {
-    height: 74vh; }
-    #top-section .roselia-img {
-      width: 80%; }
+    height: 100vh; }
     #top-section .floating-img {
-      height: 75vh; } }
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
 
 @media (max-width: 37.5rem) {
   #top-section .roselia-img {
@@ -243,17 +303,73 @@ header {
 
 @media (max-width: 30rem) {
   #top-section {
-    height: 45vh; }
+    height: 63vh; }
     #top-section .bluredbg {
-      height: 45vh; }
+      height: 64vh; }
     #top-section .floating-img {
-      height: 46vh; } }
+      height: 66vh; } }
+
+@media (max-width: 30rem) {
+  #top-section {
+    height: 50vh; }
+    #top-section .floating-img {
+      height: 51vh; }
+    #top-section .roselia-img {
+      width: 85%; } }
 
 @media (max-width: 21.875em) {
   #top-section {
-    height: 41vh; }
+    height: 50vh; }
     #top-section .floating-img {
-      height: 42vh; } }
+      height: 53vh; }
+    #top-section .roselia-img {
+      width: 80%; } }
+
+@media (min-height: 64rem) {
+  #top-section {
+    height: 55vh; }
+    #top-section .floating-img {
+      height: 56vh; }
+    #top-section .roselia-img {
+      width: 77%; } }
+
+@media (min-height: 85.375rem) {
+  #top-section {
+    height: 40vh; }
+    #top-section .floating-img {
+      height: 41vh; }
+    #top-section .roselia-img {
+      width: 77%; } }
+
+@media (max-height: 23.4375rem) {
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 55%; }
+      #top-section .roselia-img img {
+        width: 100%; } }
+
+@media (max-height: 22.5rem) {
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 63%; }
+      #top-section .roselia-img img {
+        width: 100%; } }
+
+@media (max-height: 20rem) {
+  #top-section {
+    height: 100vh; }
+    #top-section .floating-img {
+      height: 100vh; }
+    #top-section .roselia-img {
+      width: 65%; }
+      #top-section .roselia-img img {
+        width: 100%; } }
 
 /* ========================================
   BIO SECTION
@@ -443,10 +559,14 @@ header {
       width: 50%; }
 
 @media (min-width: 90.625rem) {
+  #album .container .info .title {
+    margin-bottom: 2.6rem; }
+  #album .container .info ul.singles li {
+    margin-bottom: 2.3rem; }
   #album .container .info .logos li {
     width: 12rem; } }
 
-@media (max-width: 87.5rem) {
+@media (max-width: 90.56rem) {
   #album .container .info .title {
     margin-bottom: 2.5rem; }
   #album .container .info ul.singles li {
