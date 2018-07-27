@@ -215,6 +215,9 @@ header {
 @media (max-width:53.125rem) {
   #top-section {
     height: 100vh;
+    .floating-img {
+      height:100vh;
+    }
     .roselia-img {
         width:73%;
       img {
@@ -379,6 +382,9 @@ header {
 @media (min-height:85.375rem) {
   #top-section {
     height:40vh;
+    .bluredbg {
+      height: 40vh;
+    }
     .floating-img {
       height: 41vh;
     }
